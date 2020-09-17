@@ -1,28 +1,31 @@
-const assertEqual = function(actual) {
-	console.log(actual);
+const assertEqual = function (actual) {
+  console.log(actual);
 
 
 };
 
-const letterPositions = function(sentence) {
+const letterPositions = function (sentence) {
   const results = {};
 
 
-sentence = sentence.replace(/ /g,'');
-var spl = sentence.split("");
-var arr = [];
+  //sentence = sentence.replace(/ /g, '');
+  //var spl = sentence.split("");
 
-for(var i = 0; i < spl.length; i++){
-  const letter = spl[i];
- 
-  if (results[letter]) {
-     arr.push(i);
-    results[letter] = arr;
-  } else { 
-    arr.push(i);
-    results[letter] = arr;
+
+  for (var i = 0; i < sentence.length; i++) {
+   if(sentence[i] === " "){
+     continue;
+   }
+    const letter = sentence[i];
+
+    if (results[letter]) {
+
+      results[letter].push(i);
+    } else {
+      results[letter] = [];
+      results[letter].push(i);
+    }
   }
-}
   return results;
 
 };
