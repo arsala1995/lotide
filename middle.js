@@ -15,12 +15,6 @@ const eqArrays = function(Array1, Array2){
 
 };
 
-const assertArraysEqual = function(actual) {
-
-
- console.log(actual);
-};
-
 
 
 
@@ -57,11 +51,11 @@ for(var i = 0; i < array.length; i++){
 }
 
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]));
 
-assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]));
 
-assertArraysEqual(middle([1]));
-assertArraysEqual(middle([1, 2]));
-assertArraysEqual(middle([1, 2, 3]));
-assertArraysEqual(middle([1, 2, 3, 4]));
+// assertArraysEqual(middle([1]));
+// assertArraysEqual(middle([1, 2]));
+// assertArraysEqual(middle([1, 2, 3]));
+// assertArraysEqual(middle([1, 2, 3, 4]));
+
+module.exports = middle;
